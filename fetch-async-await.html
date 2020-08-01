@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fetch Async Await</title>
+</head>
+<body>
+  
+  <script>
+    const getTodos = async () => {
+      const response = await fetch('json/mario.json');
+
+      if(response.status !== 200) {
+        throw new Error('Cannot fetch the data');
+      }
+
+      const data = await response.json();
+
+      return data;
+    }
+
+    getTodos()
+      .then(data => {
+        console.log('resolve 1', data);
+      })
+      .catch(err => {
+        console.log(err.message);
+      })
+
+    /* simple fetch
+    fetch('json/mario.json')
+      .then(response => {
+        console.log('resolve', response)
+        return response.json()
+      })
+      .then(data => {
+        console.log(data);
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    */
+  </script>
+</body>
+</html>
