@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+  <style>
+    body {
+      background: #eeedec;
+      letter-spacing: 0.2em;
+      font-size: 0.8em;
+    }
+    .container {
+      max-width: 400px;
+    }
+    .icon {
+      position: relative;
+      top: -50px;
+      border-radius: 50%;
+      width: 100px;
+      margin-bottom: -50px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container my-5 mx-auto">
+    <h1 class="text-muted text-center my-4">Ninja Weather</h1>
+
+    <form action="#" class="change-location my-4 text-center text-muted">
+      <label for="">Enter a location for weather information</label>
+      <input type="text" name="city" class="form-control p-4">
+    </form>
+
+    <div class="card shadow-lg rounded d-none">
+      <img src="https://via.placeholder.com/400x300" alt="" class="time card-img-top">
+      <div class="icon bg-light mx-auto text-center">
+        <img src="" alt="">
+      </div>
+      <div class="text-muted text-uppercase text-center details">
+        <h5 class="my-5">City Name</h5>
+        <div class="my-3">Weather Condition</div>
+        <div class="display-4 my-4">
+          <span>temp</span>
+          <span>&deg;C</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
