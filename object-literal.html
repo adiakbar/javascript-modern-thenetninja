@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Object Literal</title>
+</head>
+<body>
+  
+  <script>
+    const userOne = {
+      username: 'Mario',
+      login: function() {
+        console.log(`${this.username} has logged in`)
+      },
+      logout: () => {
+        console.log(`${this}`) // arrow function to window
+      }
+    }
+
+    console.log(userOne);
+    userOne.login();
+    userOne.logout();
+  </script>
+</body>
+</html>

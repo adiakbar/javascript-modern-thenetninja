@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Object Contructor</title>
+</head>
+<body>
+  
+  <script>
+    class User {
+      constructor(username) {
+        this.username = username;
+        this.score = 0;
+      }
+
+      login() {
+        console.log(`${this.username} just loged in`);
+      }
+
+      incScore(number) {
+        this.score += number;
+        console.log(`${this.username} has a score ${this.score}`);
+      }
+    }
+
+    class Admin extends User {
+      constructor(username, title) {
+        super(username)
+        this.title = title
+      }
+
+      deleteUser(user) {
+        users = users.filter(u => u.username !== user.username)
+      }
+    }
+
+    const userOne = new User('mario');
+    const userTwo = new User('Luigi');
+    console.log(userOne, userTwo);
+
+    userOne.login();
+    userTwo.login();
+
+    userOne.incScore(5);
+
+    const userThree = new Admin('Adi', 'black-belt');
+    console.log(userThree);
+  </script>
+</body>
+</html>
